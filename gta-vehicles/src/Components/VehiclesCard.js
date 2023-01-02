@@ -4,10 +4,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function VehiclesCard({ props }) {
+  const navigation = useNavigate();
+  const goToVehiclePage = () => {
+    // navigation({ pathname: "/vehicle", search: props });
+    console.log(props);
+  };
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} onClick={() => goToVehiclePage()}>
       <CardActionArea>
         <CardMedia
           component="img"

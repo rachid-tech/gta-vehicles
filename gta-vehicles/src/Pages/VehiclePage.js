@@ -1,3 +1,3 @@
-export default function VehiclePage() {
-    
+export default function VehiclePage({ props }) {
+  return <div>VEHICLE PAGE</div>;
 }

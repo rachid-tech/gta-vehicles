@@ -16,6 +16,7 @@ export default function VehiclesGrid() {
 
   return (
     <Box sx={{ display: "flex", width: "70%", flexDirection: "row" }}>
+      <button onClick={() => console.log(selectedCategories)}>Click</button>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}

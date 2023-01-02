@@ -1,7 +1,8 @@
 import { createStore } from "redux";
+import VehiclesFile from "../vehicles.json";
 
 const initialState = {
-  selectedCategories: [],
+  selectedCategories: [VehiclesFile["commercial"]],
   displayedCategories: [],
 };
 

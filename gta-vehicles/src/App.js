@@ -1,21 +1,24 @@
 import React from "react";
 import "./App.css";
-import { Provider } from "react-redux";
-import { store } from "./Redux/store";
 
 import Header from "./Components/Header";
 import MainPage from "./Pages/MainPage";
 import { Box } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import VehiclePage from "./Pages/VehiclePage";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Header />
-        <Box style={{ height: 20 }} />
-        <MainPage />
-      </div>
-    </Provider>
+    <div className="App">
+      <Header />
+      <Box style={{ height: 20 }} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="vehicle" element={<VehiclePage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
